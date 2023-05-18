@@ -29,10 +29,5 @@
             }
             yield return batch;
         }
-
-        public static IEnumerable<IReadOnlyCollection<T>> ByBatch<T>(this IEnumerable<T> source, int batchSize)
-        {
-            return source.ByBatch(batchSize, e => 1);
-        }
     }
 }
